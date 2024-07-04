@@ -4,7 +4,7 @@
 :root{
   --color-light: #ffffff;
   --color-gray: #686D76; 
-  --color-dark: #373A40;
+  --color-dark: #262A41;
   --color-light-gray: #c6c6c6;
 }
 
@@ -56,10 +56,18 @@ ul {
     transform: rotate(359deg);
 }
 
+.header h1{
+  font-size: 1.7rem;
+  color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+}
+
 .header button {
   position: absolute;
   right: 18%;
   margin-top: -30px;
+  color: var(--color-dark);
 } 
 
 .header i {
@@ -100,7 +108,7 @@ button {
 .bx-plus {
   font-size: 30px;
   margin-left: 10px;
-  background-color: rgb(100, 178, 255);
+  background-color: var(--color-dark);
   border-radius: 50%;
   padding: 5px;
   color: white;
@@ -119,7 +127,7 @@ button {
 }
 
 .divLi {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px;
   background:  var(--color-light);
   border-radius: 10px;
@@ -159,10 +167,10 @@ input[type="checkbox"]{
 
 @media (max-width: 775px) {
   input {
-    width: 70%;
+    width: 100%;
   }
   .to-do {
-    width: 80%;
+    width: 85%;
   }
 
   .divInsert button {
