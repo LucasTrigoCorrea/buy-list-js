@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
+
+:root{
+  --color-light: #ffffff;
+  --color-gray: #686D76; 
+  --color-dark: #373A40;
+  --color-light-gray: #c6c6c6;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +19,7 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background: var(--color-light);
 }
 
 p {
@@ -33,7 +42,7 @@ p {
 
 ul {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -45,8 +54,6 @@ ul {
     transition: linear all 0.3s;
     cursor: pointer;
     transform: rotate(359deg);
-  
-    
 }
 
 .header button {
@@ -71,14 +78,15 @@ ul {
   outline: none;
   width: 90%;
   font-size: 16px;
+  box-shadow: inset 1px 1px 3px 1px var(--color-light-gray);
 }
 
 .divInsert {
   padding: 10px;
-  background-color: rgb(231, 231, 231);
+  background: var(--color-light);
   border-radius: 10px;
   display: flex;
-  box-shadow: 6px 5px 10px 0px grey;
+  box-shadow: 6px 5px 10px 0px var(--color-light-gray);
 }
 
 button {
@@ -113,9 +121,9 @@ button {
 .divLi {
   margin-top: 20px;
   padding: 10px;
-  background:  rgb(231, 231, 231);
+  background:  var(--color-light);
   border-radius: 10px;
-  box-shadow: 6px 5px 10px 0px grey;
+  box-shadow: 6px 5px 10px 0px var(--color-light-gray);
   display: flex;
   align-items: center;
 }
