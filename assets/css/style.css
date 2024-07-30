@@ -98,12 +98,13 @@ ul {
 }
 
 button {
-  width: 10%;
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
 }
+
+
 
 .bx-plus {
   font-size: 30px;
@@ -165,6 +166,69 @@ input[type="checkbox"]{
     accent-color: #13e700;
 }
 
+.modal{
+  display: none;
+}
+
+.modal.active{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btnModal{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-yes{
+  background: #13e700;
+  border: none;
+  border-radius: 3px;
+  color: var(--color-dark);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 50px;
+}
+
+.btn-no{
+  display: flex;
+  background: red;
+  border: none;
+  border-radius: 3px;
+  color: var(--color-light);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+
+.btn-yes:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 6px 1px #1a1a1a62;
+  transition: linear all .3s;
+}
+
+.btn-no:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 6px 1px #1a1a1a62;
+  transition: linear all .3s;
+}
+
+
+
+
+
 @media (max-width: 775px) {
   input {
     width: 100%;
@@ -184,5 +248,13 @@ input[type="checkbox"]{
 
   p {
     font-size: x-large;
+  }
+
+  .btn-yes{
+    font-size: 1.2rem;
+  }
+  
+  .btn-no{
+    font-size: 1.2rem;
   }
 }

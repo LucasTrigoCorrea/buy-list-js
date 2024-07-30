@@ -3,13 +3,30 @@ const btnInsert = document.querySelector('.divInsert button');
 const btnDeleteAll = document.querySelector('.header button');
 const ul = document.querySelector('ul');
 const error = document.querySelector('.error');
+const header = document.querySelector('.header');
+const btnDeleteYes = document.querySelector('.btn-yes');
+const btnDeleteNo = document.querySelector('.btn-no');
+const modal = document.querySelector('.modal');
 
 var itensDB = []
 
 btnDeleteAll.onclick = () => {
-  itensDB = [];
-  updateDB()
+  modal.classList.add('active');
+  return;
 }
+
+btnDeleteYes.onclick = () => {
+  itensDB = [];
+  updateDB();
+  modal.classList.remove('active');
+  return;
+
+}
+
+btnDeleteNo.onclick = () => {
+  return modal.classList.remove('active');
+}
+
 
 text.addEventListener('keypress', e => {
   if (e.key == 'Enter' && text.value != '') {
@@ -27,6 +44,7 @@ text.addEventListener('keyup', e => {
     if(text.value) 
         error.innerHTML = '';
         error.classList.remove('error-set');
+        modal.classList.remove('active');
         return;
 })
 
@@ -64,6 +82,7 @@ function updateDB() {
 }
 
 function loadItens() {
+  modal.classList.remove('active');
   ul.innerHTML = "";
   itensDB = JSON.parse(localStorage.getItem('todolist')) ?? [];
   itensDB.forEach((item, i) => {
